@@ -12,7 +12,6 @@ class Pet(models.Model):
     petDescription = models.TextField()
     petSex = models.CharField(choices=SEX_CHOICES, max_length=1, blank=True)
     petAge = models.IntegerField(null=True)
-    petVaccinations = models.ManyToManyField('Vaccine', blank=True)
 
     def __str__(self):
         return self.petName
@@ -20,14 +19,3 @@ class Pet(models.Model):
     class Meta:
         db_table='pet'
         verbose_name_plural='pets'
-
-
-class Vaccine(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-    
-    class Meta:
-        db_table='vaccine'
-        verbose_name_plural='vaccines'

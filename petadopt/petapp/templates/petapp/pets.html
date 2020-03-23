@@ -4,17 +4,22 @@
 <table class='table'>
  <tr>
      <th>Name</th>
+     <th>Species</th>
+     <th>Breed</th>
      <th>Description</th>
+     <th>Sex</th>
+     <th>Age</th>
+
  </tr>
- {% for t in type_list %}
+ {% for p in pet %}
    <tr>
-       <td>{{ t.petName }}</td>
-       <td>{{ t.petSpecies }}</td>
-       <td>{{ t.petBreed }}</td>
-       <td>{{ t.petDescription }}</td>
-       <td>{{ t.petSex }}</td>
-       <td>{{ t.petAge }}</td>
-       <td>{{ t.petVaccinations }}</td>
+       <td>{{ p.petName }}</td>
+       <td>{{ p.petSpecies }}</td>
+       <td>{{ p.petBreed }}</td>
+       <td>{{ p.petDescription }}</td>
+       <td>{{ p.petSex }}</td>
+       <td>{{ p.petAge }}</td>
+ 
 
    </tr>
 
